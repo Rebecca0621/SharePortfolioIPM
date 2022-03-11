@@ -22,6 +22,7 @@ package tp10.metier;
 /**
  *
  * @author perussel
+ * this abstract class is the base of any kind of share.
  */
 public abstract class Action {
 
@@ -35,11 +36,20 @@ public abstract class Action {
     public String getNom() {
         return nom;
     }
-
+    /**
+    * this methode provide the value of the share for a given day.
+    *
+     * @param nom
+    */
     public Action(String nom) {
         this.nom = nom;
     }
 
+    /**
+     *
+     * @param j
+     * @return
+     */
     public abstract float valeur(Jour j);
 
     @Override
