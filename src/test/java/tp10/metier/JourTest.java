@@ -21,6 +21,7 @@ package tp10.metier;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -35,6 +36,15 @@ public class JourTest {
     public JourTest() {
     }
     
+    @org.junit.jupiter.api.Test
+    public void testConstructor(){
+      Integer numJour = 3;
+      Jour j1 = new Jour(numJour);
+      Integer result =j1.getNoJour();
+      Assertions.assertEquals(numJour, result,"doit etre le meme que celui recuperer par le methode Jour");
+     
+    }
+
     @BeforeAll
     public static void setUpClass() {
     }

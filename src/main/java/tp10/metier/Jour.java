@@ -53,12 +53,14 @@ public class Jour {
     @Override
     public boolean equals(Object o) {
         Jour jourAComparer;
-        
+        if (o != null){
         jourAComparer = (Jour)o; // "cast" de 'o' en Jour
         if(this.getNoJour() == jourAComparer.getNoJour()) // == car int est primitif
             return true;
         else 
             return false;
+        }
+        return false;
     }
     
     @Override
